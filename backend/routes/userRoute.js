@@ -53,4 +53,39 @@ router.get("/show", async (req, res) => {
 });
 
 
+//update user Details
+router.put("/update/:id", async (req, res) => {
+    
+    try {
+
+      const updateUser = await User.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true})
+            
+       
+        await updateUser.save();
+        res.status(200).json({ message: 'details successfully updated' });
+
+
+    } catch (err) {
+        console.log(err)
+    }
+})
+
+
+
+//delete User
+
+router.delete("/delete/:id", async (req, res) => {
+
+    try {
+        await User.findByIdAndDelete(req.params.id);
+
+        res.status(201).json({
+            message: "Successfully deleted"
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
+
+
 module.exports = router
