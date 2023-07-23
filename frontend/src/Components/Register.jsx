@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -93,6 +94,15 @@ const handleSubmit =()=>{
                     <button onClick={handleSubmit} className="btn btn-primary btn-lg">
                       Submit
                     </button>
+                  </div>
+
+
+                  <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <Link to={"/show"}>
+                    <button onClick={handleSubmit} className="btn btn-primary btn-lg">
+                      Show User
+                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
