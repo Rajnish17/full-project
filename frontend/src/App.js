@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+import React from "react";
 import Register from "./Components/Register"
 import ShowUser from "./Components/ShowUser"
-import './App.css';
 
 function App() {
   return (
