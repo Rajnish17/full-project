@@ -99,7 +99,7 @@ const handleSubmit =()=>{
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <Link to={"/show"}>
-                    <button onClick={handleSubmit} className="btn btn-primary btn-lg">
+                    <button className="btn btn-primary btn-lg">
                       Show User
                     </button>
                     </Link>
